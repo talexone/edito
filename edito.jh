@@ -1,0 +1,30 @@
+entity Theme {
+	createDate Date,
+    publishDate Date,
+	title String,
+    description String
+}
+
+entity User {
+	name String,
+    password String
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	User to Theme{user}
+}
+
+
+// Set pagination options
+paginate Theme with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Theme
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
