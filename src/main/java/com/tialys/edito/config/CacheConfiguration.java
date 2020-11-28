@@ -49,6 +49,7 @@ public class CacheConfiguration {
             createCache(cm, com.tialys.edito.domain.User.class.getName() + ".authorities");
             createCache(cm, com.tialys.edito.domain.PersistentToken.class.getName());
             createCache(cm, com.tialys.edito.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, com.tialys.edito.domain.Theme.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
